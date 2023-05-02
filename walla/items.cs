@@ -18,7 +18,7 @@ public class  Hoe : items
         Stackable = false;
         Placable = false;
         Name = "Hoe";
-        Description = "Is Hoe";
+        Description = "Used to farm land";
         Texture = "Textures/Hoe.png";
         color = Color.WHITE;
 
@@ -33,6 +33,19 @@ public class Seed : items
         Name = "Seed";
         Description = "Seed";
         Texture = "Textures/Seed.png";
+        color = Color.WHITE;
+        
+    }
+}
+public class Shovel : items
+{
+    public Shovel()
+    {
+        Stackable = false;
+        Placable = true;
+        Name = "Shovel";
+        Description = "Shovel";
+        Texture = "Textures/Shovel.png";
         color = Color.WHITE;
         
     }

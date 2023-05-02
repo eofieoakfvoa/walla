@@ -16,7 +16,7 @@ public class Map
             {
             Cell cellAdd = tiles(x,y);
             gridcells.Add(cellAdd);
-            cellAdd.hitBox = new Rectangle(x*CellSize, y*CellSize, CellSize, CellSize);
+            cellAdd.Position = new Rectangle(x*CellSize, y*CellSize, CellSize, CellSize);
             }
         }
     } 

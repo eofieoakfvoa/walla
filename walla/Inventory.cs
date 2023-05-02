@@ -5,7 +5,6 @@ public class Inventory
     public Dictionary<string, items> itemsInInventory = new Dictionary<string, items>();
     public Dictionary<int, string> InventorySlots = new Dictionary<int, string>();
     int inventoryLength = 6;
-    public List<Rectangle> InventoryItemBox = new();
     public Inventory()
     {
         for (var i = 0; i < inventoryLength; i++)
@@ -21,7 +20,6 @@ public class Inventory
             if (ItemData.Stackable == true)
             {
                 ItemData.Stacks += Amount;
-                System.Console.WriteLine(ItemData.Stacks);
             }
         }
         else
@@ -32,12 +30,6 @@ public class Inventory
             InventorySlots.Add(UsableSlot, ItemData.Name);
             itemsInInventory.Add(ItemData.Name, ItemData);
 
-            foreach (var kvp in InventorySlots) {
-            Console.WriteLine("Key = {0}, Value = {1}", kvp.Key, kvp.Value);
-            }
-            foreach (var kvp in itemsInInventory) {
-            Console.WriteLine("Key = {0}, Value = {1}", kvp.Key, kvp.Value);
-            }
         }
     }
     public void RemoveFromInventory(int slot)
