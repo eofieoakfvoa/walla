@@ -13,6 +13,7 @@ public class items
 }
 public class  Hoe : items
 {
+    //construct
     public Hoe()
     {
         Stackable = false;
